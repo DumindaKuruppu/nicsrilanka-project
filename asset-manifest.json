@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/nicsrilanka-project/static/css/main.c10e607c.css",
-    "main.js": "/nicsrilanka-project/static/js/main.326df5ad.js",
-    "static/js/787.f8e7486b.chunk.js": "/nicsrilanka-project/static/js/787.f8e7486b.chunk.js",
-    "static/media/id-image.png": "/nicsrilanka-project/static/media/id-image.263aa514bd5f85e2ba9f.png",
-    "index.html": "/nicsrilanka-project/index.html",
-    "main.c10e607c.css.map": "/nicsrilanka-project/static/css/main.c10e607c.css.map",
-    "main.326df5ad.js.map": "/nicsrilanka-project/static/js/main.326df5ad.js.map",
-    "787.f8e7486b.chunk.js.map": "/nicsrilanka-project/static/js/787.f8e7486b.chunk.js.map"
+    "main.css": "/static/css/main.c10e607c.css",
+    "main.js": "/static/js/main.cab4c939.js",
+    "static/js/787.f8e7486b.chunk.js": "/static/js/787.f8e7486b.chunk.js",
+    "static/media/id-image.png": "/static/media/id-image.263aa514bd5f85e2ba9f.png",
+    "index.html": "/index.html",
+    "main.c10e607c.css.map": "/static/css/main.c10e607c.css.map",
+    "main.cab4c939.js.map": "/static/js/main.cab4c939.js.map",
+    "787.f8e7486b.chunk.js.map": "/static/js/787.f8e7486b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c10e607c.css",
-    "static/js/main.326df5ad.js"
+    "static/js/main.cab4c939.js"
   ]
 }
