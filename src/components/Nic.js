@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../style.css";
 
 function Nic() {
@@ -7,7 +7,7 @@ function Nic() {
 
   function handleInputChange(event) {
     setNicInputData(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
     nicOutputData === "Invalid NIC"
       ? setNicOutputData("")
       : setNicOutputData(nicOutputData);
