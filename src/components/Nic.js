@@ -25,7 +25,7 @@ function Nic() {
       setNicOutputData(nicInputData);
 
       let newDataValues = dataFinderFromNew();
-      console.log(newDataValues);
+      // console.log(newDataValues);
       newToOldConverter(newDataValues);
     } else if (nicInputData.length === 0) {
       setNicOutputData("Please enter your NIC");
