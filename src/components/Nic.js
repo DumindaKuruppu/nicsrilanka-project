@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style.css";
 
 function Nic() {
-  const [nicInputData, setNicInputData] = React.useState("");
-  const [nicOutputData, setNicOutputData] = React.useState("");
+  const oldPattern = /^\d{9}[V,X,v,x]$/;
+  const newPattern = /^\d{12}$/;
+  const [nicInputData, setNicInputData] = useState("");
+  const [nicOutputData, setNicOutputData] = useState("");
+  const [isMale, setIsMale] = useState(null);
 
   function handleInputChange(event) {
     setNicInputData(event.target.value);
@@ -16,16 +19,15 @@ function Nic() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    if (nicInputData.length === 10) {
+    if (oldPattern.test(nicInputData)) {
       setNicOutputData(nicInputData);
 
       let oldDataValues = dataFinderFromOLd();
       oldToNewConverter(oldDataValues);
-    } else if (nicInputData.length === 12) {
+    } else if (newPattern.test(nicInputData)) {
       setNicOutputData(nicInputData);
 
       let newDataValues = dataFinderFromNew();
-      // console.log(newDataValues);
       newToOldConverter(newDataValues);
     } else if (nicInputData.length === 0) {
       setNicOutputData("Please enter your NIC");
@@ -37,17 +39,17 @@ function Nic() {
   function dataFinderFromOLd() {
     var year = nicInputData.slice(0, 2);
     var date = nicInputData.slice(2, 5);
-    var isMale = nicInputData.slice(2, 5) < 500 ? true : false;
+    setIsMale(nicInputData.slice(2, 5) < 500 ? true : false);
     var endNumbers = nicInputData.slice(5, 9);
-    return { year, date, isMale, endNumbers };
+    return { year, date, endNumbers };
   }
 
   function dataFinderFromNew() {
     var year = nicInputData.slice(2, 4);
     var date = nicInputData.slice(4, 7);
-    var isMale = nicInputData.slice(4, 7) < 500 ? true : false;
+    setIsMale(nicInputData.slice(4, 7) < 500 ? true : false);
     var endNumbers = nicInputData.slice(8, 12);
-    return { year, date, isMale, endNumbers };
+    return { year, date, endNumbers };
   }
 
   function oldToNewConverter(oldDataValues) {
@@ -90,6 +92,8 @@ function Nic() {
           value={nicOutputData}
           onChange={handleInputChange}
         />
+
+         
 
         <button className="Nic-button" onClick={handleSubmit}>
           Convert
