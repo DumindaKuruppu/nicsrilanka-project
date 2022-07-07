@@ -7,7 +7,7 @@ function Nic() {
 
   function handleInputChange(event) {
     setNicInputData(event.target.value);
-    // console.log(event.target.value);
+    console.log(event.target.value);
     nicOutputData === "Invalid NIC"
       ? setNicOutputData("")
       : setNicOutputData(nicOutputData);
@@ -72,7 +72,7 @@ function Nic() {
 
   return (
     <div>
-      <div className="Nic-container">
+      <form className="Nic-container">
         <input
           className="nic-input"
           type="Text"
@@ -94,7 +94,7 @@ function Nic() {
         <button className="Nic-button" onClick={handleSubmit}>
           Convert
         </button>
-      </div>
+      </form>
     </div>
   );
 }
