@@ -1,7 +1,6 @@
 .Nic-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -24,7 +23,6 @@
 }
 
 .nic-output {
-  width: 30%;
   height: auto;
   text-indent: 0px;
   border-radius: 20px;
@@ -35,6 +33,8 @@
   border: 1px solid #555;
   outline: none;
   font-weight: bold;
+  padding-right: 30px; /* Adjust the value to make space for the icon */
+  width: 100%; /* This ensures the input takes the full width of the container */
 }
 
 .nic-input:focus {
@@ -74,3 +74,25 @@ nav > img {
   height: 70px;
   margin-right: 10px;
 }
+
+.input-container {
+  width: 30%;
+  position: relative;
+  display: inline-block;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 52%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: #818181BF;
+}
+
+
+.icon:hover {
+  color: #2b559d;
+}
+
